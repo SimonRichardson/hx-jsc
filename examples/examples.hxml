@@ -11,6 +11,15 @@
 -debug
 
 --next
+-neko ../bin/Example01.n
+-main Example01
+-cp ../src/main/haxe
+-cp main/haxe/example
+-lib funk
+-lib format
+-debug
+
+--next
 -cmd cd main/js/example
 -cmd zip -r ../../../../bin/zip.zip zip
 

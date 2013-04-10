@@ -12,14 +12,13 @@ class ZipExtractor {
     private var _reader : Reader;
 
     public function new(bytes : Bytes) {
-        trace(bytes.toHex().toUpperCase());
-        var input = new BytesInput(bytes);
-        _reader = new Reader(input);        
+        _reader = new Reader(new BytesInput(bytes));        
     }
 
     public function extract(expr : EReg) : List<Entry> {
         var list = Nil;
-        for (entry in _reader.read()) {
+        var entries = _reader.read();
+        for (entry in entries) {
             if (expr.match(entry.fileName)) {
                 list = list.prepend(entry);
             }
