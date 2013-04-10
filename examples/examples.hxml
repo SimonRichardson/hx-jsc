@@ -1,8 +1,13 @@
+-cmd rm -rfd ../bin
+-cmd mkdir ../bin
+
+--next
 -js ../bin/Example01.js
 -main Example01
 -cp ../src/main/haxe
 -cp main/haxe/example
 -lib funk
+-lib format
 -debug
 
 --next
