@@ -1,0 +1,19 @@
+-js ../bin/Example01.js
+-main Example01
+-cp ../src/main/haxe
+-cp main/haxe/example
+-lib funk
+-debug
+
+--next
+-cmd cd main/js/example
+-cmd zip -r ../../../../bin/zip.zip zip
+
+--next
+-cmd cd ../../../../bin
+-cmd echo "<html lang='en-GB'>\n<head>\n<title>Example01</title>\n</head>\n<body>\n<script type='text/javascript' src='Example01.js'></script>\n</body>\n</html>" >> ../bin/Example01.html
+
+--next
+-cmd python -m SimpleHTTPServer
+
+
